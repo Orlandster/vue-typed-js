@@ -71,7 +71,7 @@ Minimal setup:
 </vue-typed-js>
 ```
 
-The `typing` class allows you to just animate certain parts of a string:
+The `typing` class also allows you to just animate certain parts of a string:
 ```html
 <vue-typed-js :strings="['John', 'James']">
   <h1>Hey <span class="typing"></span></h1>
@@ -83,32 +83,63 @@ You can make use of the following properties in order to customize your typing e
 
 | Property             | Type    | Description                                                          | Usage                                                           |
 |----------------------|---------|----------------------------------------------------------------------|-----------------------------------------------------------------|
-| strings              | Array   | strings to be typed                                                  | `<vue-typed-js :strings="['Text 1', 'Text 2']"></vue-typed-js>` |
-| stringsElement       | String  | ID of element containing string children                             | `<vue-typed-js :stringsElement="'myId'"></vue-typed-js>`                                                                |
-| typeSpeed            | Number  | type speed in milliseconds                                           | `<vue-typed-js :typeSpeed="50"></vue-typed-js>`                                                                |
-| startDelay           | Number  | time before typing starts in milliseconds                            | `<vue-typed-js :startDelay="1000"></vue-typed-js>`                                                                |
-| backSpeed            | Number  | backspacing speed in milliseconds                                    | `<vue-typed-js :backSpeed="10"></vue-typed-js>`                                                                |
-| smartBackspace       | Boolean | only backspace what doesn't match the previous string                | `<vue-typed-js :smartBackspace="true"></vue-typed-js>`                                                                |
-| shuffle              | Boolean | shuffle the strings                                                  | `<vue-typed-js :shuffle="true"></vue-typed-js>`                                                                |
-| backDelay            | Number  | time before backspacing in milliseconds                              | `<vue-typed-js :backDelay="100"></vue-typed-js>`                                                                |
-| fadeOut              | Boolean | Fade out instead of backspace                                        | `<vue-typed-js :fadeOut="true"></vue-typed-js>`                                                                |
-| fadeOutClass         | String  | css class for fade animation                                         | `<vue-typed-js :fadeOutClass="'fadeOutClass'"></vue-typed-js>`                                                                |
-| fadeOutDelay         | Boolean | fade out delay in milliseconds                                       | `<vue-typed-js :fadeOutDelay="true"></vue-typed-js>`                                                                |
-| loop                 | Boolean | loop strings                                                         | `<vue-typed-js :loop="true"></vue-typed-js>`                                                                |
-| loopCount            | Number  | amount of loops                                                      | `<vue-typed-js :loopCount="3"></vue-typed-js>`                                                                |
-| showCursor           | Boolean | show cursor                                                          | `<vue-typed-js :showCursor="true"></vue-typed-js>`                                                                |
-| cursorChar           | String  | character for cursor                                                 | `<vue-typed-js :cursorChar="'_'"></vue-typed-js>`                                                                |
-| autoInsertCss        | Boolean | insert CSS for cursor and fadeOut into HTML                          | `<vue-typed-js :autoInsertCss="true"></vue-typed-js>`                                                                |
-| attr                 | String  | attribute for typing Ex: input placeholder, value, or just HTML text | `<vue-typed-js :attr="'placeholder'"></vue-typed-js>`                                                                |
-| bindInputFocusEvents | Boolean | bind to focus and blur if el is text input                           | `<vue-typed-js :bindInputFocusEvents="true"></vue-typed-js>`                                                                |
-| contentType          | String  | 'html' or 'null' for plaintext                                       | `<vue-typed-js :contentType="'html'"></vue-typed-js>`                                                                |
-
+| strings              | Array   | strings to be typed                                                  | `:strings="['Text 1', 'Text 2']"` |
+| stringsElement       | String  | ID of element containing string children                             | `:stringsElement="'myId'"`                                                                |
+| typeSpeed            | Number  | type speed in milliseconds                                           | `:typeSpeed="50"`                                                                |
+| startDelay           | Number  | time before typing starts in milliseconds                            | `:startDelay="1000"`                                                                |
+| backSpeed            | Number  | backspacing speed in milliseconds                                    | `:backSpeed="10"`                                                                |
+| smartBackspace       | Boolean | only backspace what doesn't match the previous string                | `:smartBackspace="true"`                                                                |
+| shuffle              | Boolean | shuffle the strings                                                  | `:shuffle="true"`                                                                |
+| backDelay            | Number  | time before backspacing in milliseconds                              | `:backDelay="100"`                                                                |
+| fadeOut              | Boolean | Fade out instead of backspace                                        | `:fadeOut="true"`                                                                |
+| fadeOutClass         | String  | css class for fade animation                                         | `:fadeOutClass="'fadeOutClass'"`                                                                |
+| fadeOutDelay         | Boolean | fade out delay in milliseconds                                       | `:fadeOutDelay="true"`                                                                |
+| loop                 | Boolean | loop strings                                                         | `:loop="true"`                                                                |
+| loopCount            | Number  | amount of loops                                                      | `:loopCount="3"`                                                                |
+| showCursor           | Boolean | show cursor                                                          | `:showCursor="true"`                                                                |
+| cursorChar           | String  | character for cursor                                                 | `:cursorChar="'_'"`                                                                |
+| autoInsertCss        | Boolean | insert CSS for cursor and fadeOut into HTML                          | `:autoInsertCss="true"`                                                                |
+| attr                 | String  | attribute for typing Ex: input placeholder, value, or just HTML text | `:attr="'placeholder'"`                                                                |
+| bindInputFocusEvents | Boolean | bind to focus and blur if el is text input                           | `:bindInputFocusEvents="true"`                                                                |
+| contentType          | String  | 'html' or 'null' for plaintext                                       | `:contentType="'html'"`                                                                |
 
 ## Events
+You can listen to the following events:
 
-# Example
+| Event                  | Description                                                          | Usage                                                           |
+|------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------|
+| onComplete             | All typing is complete                                               | `@onComplete="doSmth()"` |
+| preStringTyped         | Before each string is typed                                          | `@preStringTyped="doSmth()"`                                                                |
+| onStringTyped          | After each string is typed                                           | `@onStringTyped="doSmth()"`                                                                |
+| onLastStringBackspaced | During looping, after last string is typed                           | `@onLastStringBackspaced="doSmth()"`                                                                |
+| onTypingPaused         | Typing has been stopped                                              | `@onTypingPaused="doSmth()"`                                                                |
+| onTypingResumed        | Typing has been started after being stopped                          | `@onTypingResumed="doSmth()"`                                                                |
+| onReset                | After reset                                                          | `@onReset="doSmth()"`                                                                |
+| onStop                 | After stop                                                           | `@onStop="doSmth()"`                                                                |
+| onStart                | After start                                                          | `@onStart="doSmth()"`                                                                |
+| onDestroy              | After destroy                                                        | `@onDestroy="doSmth()"`                                                                |
+## Features
+Checkout features like `type pausing`, `smart backspacing` etc. on the libraries [page](https://github.com/mattboldt/typed.js/).
 
-> TODO
+# Examples
+Here are several examples:
+
+```html
+<!-- infinite loop -->
+<vue-typed-js :strings="['awesome', 'brilliant']" :loop="true" @onComplete="doSmth()">
+  <h2>We are a <span class="typing"></span> company!</h2>
+</vue-typed-js>
+
+<!-- type pausing -->
+<vue-typed-js :strings="['This is text ^1000 which gets paused for 1 second', 'wow, interesting']">
+  <h2 class="typing"></h2>
+</vue-typed-js>
+
+<!-- output html -->
+<vue-typed-js :strings="['<p>Paragraph</p>', '<span>Span</span>']" :contentType="'html'">
+  <h2 class="typing"></h2>
+</vue-typed-js>
+```
 
 ---
 
