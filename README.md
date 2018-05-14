@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/vue-typed-js.svg) ![npm](https://img.shields.io/npm/dm/vue-typed-js.svg)](https://www.npmjs.com/package/vue-typed-js)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8789841c45264d19ad2595061437a8a9)](https://www.codacy.com/app/orlando.wenzinger/vue-typed-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Orlandster1998/vue-typed-js&amp;utm_campaign=Badge_Grade)
 
 A Vue.js integration for Typed.js. 
 
