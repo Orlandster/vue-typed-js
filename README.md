@@ -23,22 +23,13 @@ npm install --save vue-typed-js
 
 ## Default import
 
-Install all the components:
-
-```javascript
-import Vue from 'vue'
-import VueTypedJs from 'vue-typed-js'
-
-Vue.use(VueTypedJs)
-```
-
-Use specific components:
+Install the component:
 
 ```javascript
 import Vue from 'vue'
 import { VueTypedJs } from 'vue-typed-js'
 
-Vue.component('vue-typed-js', VueTypedJs)
+Vue.use(VueTypedJs)
 ```
 
 **⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.**
