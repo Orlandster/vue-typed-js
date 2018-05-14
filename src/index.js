@@ -1,13 +1,13 @@
-import TypedComponent from './components/TypedComponent.vue'
+import VueTypedJs from './components/VueTypedJs.vue'
 
 // Install the components
 export function install (Vue) {
-  Vue.component('typed', TypedComponent)
+  Vue.component('vue-typed-js', VueTypedJs)
 }
 
 // Expose the components
 export {
-  TypedComponent,
+  VueTypedJs,
 }
 
 // Plugin

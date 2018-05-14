@@ -9,11 +9,11 @@ import Typed from 'typed.js'
 import { props, getEventHandlers } from '../config/typed-component.config'
 
 export default {
-  name: 'typed-component',
+  name: 'vue-typed-js',
   props,
   data () {
     return {
-      typedObj: null
+      typedObj: null,
     }
   },
   methods: {
@@ -21,20 +21,20 @@ export default {
       throw new TypeError(message)
     },
     initTypedJS: function () {
-      const $typed = this.$refs.typedElement.querySelector('.typing');
+      const $typed = this.$refs.typedElement.querySelector('.typing')
 
-      if(this.$slots.default.length > 1) {
+      if (this.$slots.default.length > 1) {
         this.throwError(`Just one child element allowed inside <${this.$options.name}> component.`)
-      } else if(this.$slots.default.length == 1) {
-        let typedConfig = this.$props;
-        typedConfig = getEventHandlers(this, typedConfig);
-        this.typedObj = new Typed($typed, typedConfig);
+      } else if (this.$slots.default.length === 1) {
+        let typedConfig = this.$props
+        typedConfig = getEventHandlers(this, typedConfig)
+        this.typedObj = new Typed($typed, typedConfig)
       }
-    }
+    },
   },
   mounted: function () {
-    this.initTypedJS();
-  }
+    this.initTypedJS()
+  },
 }
 </script>
 
