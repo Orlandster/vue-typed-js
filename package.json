@@ -1,7 +1,7 @@
 {
   "name": "vue-typed-js",
   "description": "typed.js vue integration - easily create typing animations",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Orlando Wenzinger",
     "email": "orlando.wenzinger@bluewin.ch"
@@ -11,6 +11,7 @@
     "vuejs",
     "plugin"
   ],
+  "repository": "https://github.com/Orlandster1998/vue-typed-js",
   "license": "MIT",
   "main": "dist/vue-typed-js.common.js",
   "unpkg": "dist/vue-typed-js.browser.js",
