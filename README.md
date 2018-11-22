@@ -4,7 +4,7 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8789841c45264d19ad2595061437a8a9)](https://www.codacy.com/app/orlando.wenzinger/vue-typed-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Orlandster1998/vue-typed-js&amp;utm_campaign=Badge_Grade)
 
-A Vue.js integration for Typed.js. 
+A Vue.js integration for Typed.js.
 
 Typed.js is a library that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
 
@@ -14,7 +14,7 @@ Checkout the offical project [here](https://github.com/mattboldt/typed.js/).
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Example](#example)
+- [Example](#examples)
 
 # Installation
 
@@ -28,7 +28,7 @@ Install the component:
 
 ```javascript
 import Vue from 'vue'
-import { VueTypedJs } from 'vue-typed-js'
+import VueTypedJs from 'vue-typed-js'
 
 Vue.use(VueTypedJs)
 ```
