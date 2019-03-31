@@ -85,7 +85,7 @@ You can make use of the following properties in order to customize your typing e
 | backDelay            | Number  | time before backspacing in milliseconds                              | `:backDelay="100"`                                                                |
 | fadeOut              | Boolean | Fade out instead of backspace                                        | `:fadeOut="true"`                                                                |
 | fadeOutClass         | String  | css class for fade animation                                         | `:fadeOutClass="'fadeOutClass'"`                                                                |
-| fadeOutDelay         | Boolean | fade out delay in milliseconds                                       | `:fadeOutDelay="true"`                                                                |
+| fadeOutDelay         | Number | fade out delay in milliseconds                                       | `:fadeOutDelay="500"`                                                                |
 | loop                 | Boolean | loop strings                                                         | `:loop="true"`                                                                |
 | loopCount            | Number  | amount of loops                                                      | `:loopCount="3"`                                                                |
 | showCursor           | Boolean | show cursor                                                          | `:showCursor="true"`                                                                |
