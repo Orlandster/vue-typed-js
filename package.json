@@ -1,7 +1,7 @@
 {
   "name": "vue-typed-js",
   "description": "typed.js vue integration - easily create typing animations",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": {
     "name": "Orlando Wenzinger",
     "email": "orlando.wenzinger@bluewin.ch"
