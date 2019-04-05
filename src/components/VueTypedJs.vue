@@ -32,8 +32,11 @@ export default {
       }
     },
   },
-  mounted: function () {
+  mounted () {
     this.initTypedJS()
+  },
+  destroyed () {
+    this.typedObj.destroy()
   },
 }
 </script>
