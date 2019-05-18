@@ -43,6 +43,13 @@ Vue.use(VueTypedJs)
 <script src="vue.js"></script>
 <script src="vue-typed-js/dist/vue-typed-js.browser.js"></script>
 ```
+## Or via CDN
+```html
+<link rel="stylesheet" href="//unpkg.com/vue-typed-js@latest/dist/vue-typed-js.css"/>
+
+<script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+<script src="//unpkg.com/vue-typed-js@latest/dist/vue-typed-js.browser.js"></script>
+```
 
 The plugin should be auto-installed. If not, you can install it manually with the instructions below.
 
