@@ -46,6 +46,6 @@
     "webpack-merge": "^1.1.2"
   },
   "dependencies": {
-    "typed.js": "git+https://github.com/mattboldt/typed.js.git"
+    "typed.js": "^2.0.10"
   }
 }
