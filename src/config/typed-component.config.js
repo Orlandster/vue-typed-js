@@ -103,36 +103,36 @@ export const getEventHandlers = (context, typedConfig) => {
     context.$emit('onComplete')
   }
 
-  typedConfig.preStringTyped = () => {
-    context.$emit('preStringTyped')
+  typedConfig.preStringTyped = (arrayPos) => {
+    context.$emit('preStringTyped', arrayPos)
   }
 
-  typedConfig.onStringTyped = () => {
-    context.$emit('onStringTyped')
+  typedConfig.onStringTyped = (arrayPos) => {
+    context.$emit('onStringTyped', arrayPos)
   }
 
   typedConfig.onLastStringBackspaced = () => {
     context.$emit('onLastStringBackspaced')
   }
 
-  typedConfig.onTypingPaused = () => {
-    context.$emit('onTypingPaused')
+  typedConfig.onTypingPaused = (arrayPos) => {
+    context.$emit('onTypingPaused', arrayPos)
   }
 
-  typedConfig.onTypingResumed = () => {
-    context.$emit('onTypingResumed')
+  typedConfig.onTypingResumed = (arrayPos) => {
+    context.$emit('onTypingResumed', arrayPos)
   }
 
   typedConfig.onReset = () => {
     context.$emit('onReset')
   }
 
-  typedConfig.onStop = () => {
-    context.$emit('onStop')
+  typedConfig.onStop = (arrayPos) => {
+    context.$emit('onStop', arrayPos)
   }
 
-  typedConfig.onStart = () => {
-    context.$emit('onStart')
+  typedConfig.onStart = (arrayPos) => {
+    context.$emit('onStart', arrayPos)
   }
 
   typedConfig.onDestroy = () => {
